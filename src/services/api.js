@@ -26,3 +26,8 @@ export const logout = () => {
 };
 
 export default api;
+
+
+export const cleanPayload = (payload) => Object.fromEntries(
+  Object.entries(payload).filter(([, value]) => value !== '' && value !== null && value !== undefined),
+);
